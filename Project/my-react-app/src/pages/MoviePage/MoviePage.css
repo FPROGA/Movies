@@ -1,0 +1,75 @@
+
+.firstPage{
+    display: flex;
+    flex-direction: row;
+}
+.first-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+}
+.first-container{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+.rating{
+    display: flex;
+    max-height: 23px;
+    gap: 4px;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 36px;
+    padding: 4px 12px;
+    background-color: #308E21;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.movie-poster{
+    max-width: 680px;
+    max-height: 552px;
+    height: auto;
+    width: auto;
+}
+.buttons{
+    margin-top: 60px;
+    max-width: 255px;
+}
+.button-trailer{
+    max-width: 171px;
+}
+.secondPage{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+h1{
+    font-weight: 700;
+    font-size: 48px;
+}
+h2{
+    font-weight: 700;
+    font-style: bold;
+    font-size: 40px;
+}
+h3{
+    font-weight: 400;
+    font-size: 24px;
+}
+h4{
+    font-weight: 400;
+    font-size: 18px;
+    gap: 24px;
+    color: #FFFFFFB2;
+    margin: 0;
+}
+p{
+    font-weight: 400;
+    font-size: 18px;
+    gap: 24px;
+    align-items: center;
+    display:flex;
+}

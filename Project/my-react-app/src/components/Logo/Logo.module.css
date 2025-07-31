@@ -1,0 +1,19 @@
+
+.logoContainer {
+  cursor: pointer;
+  display: flex;
+  justify-content: var(--logo-position);
+  transition: transform 0.3s ease;
+  line-height: 0;
+}
+
+.logoContainer:hover {
+  transform: scale(1.05);
+}
+
+.logoImage {
+  display: block;
+  height: var(--logo-size, 50px);
+  width: auto;
+  max-width: 100%;
+}

@@ -1,0 +1,50 @@
+.container{
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+   gap: 40px;
+  background-color: aliceblue;
+  border-radius: 24px;
+  height: 381px;
+  width: 420px;
+
+}
+.register-wrapper{
+  margin-top: 64px;
+}
+.form-wrapper{
+  height: 252px;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+   margin-left: auto;
+  margin-right: auto;
+}
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.success-message {
+  color: green;
+  margin-top: 10px;
+}
+@media(max-width: 375px) {
+
+.register-form {
+  
+  height: 481px;
+  width: 335px;
+}
+.form-wrapper{
+  height: 410px;
+  width: 375px;
+}
+}
