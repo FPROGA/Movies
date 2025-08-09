@@ -1,0 +1,107 @@
+.desktop-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 88px;
+}
+.main-but a {
+  text-decoration: none; /* Убираем стандартное подчёркивание */
+  position: relative; /* Для псевдоэлемента */
+  padding-bottom: 8px; /* Отступ для подчёркивания */
+}
+.main-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 150px;
+}
+.main-but {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+}
+.genres-button,
+.home-button,
+.login-button {
+  font-size: 24px;
+  font-weight: 400;
+  color: white;
+  transition: text-decoration 0.3s ease;
+}
+.genres-button:hover,
+.home-button:hover,
+.login-button:hover,
+.genres-button:active,
+.home-button:active {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration: #dc5dfc;
+}
+.search-bar{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  background-color: #393b3c;
+}
+.search-input-container {
+  position: relative;
+  width: 655px;
+  height: 48px;
+}
+
+.search-input {
+  width: 100%;
+  height: 100%;
+  padding: 0 0 0 48px;
+  background-color: #393b3c;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #6d6f70;
+}
+
+.search-icon {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+.movies{
+  position:absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #393b3c;
+  order: 1000;
+  flex-grow: 0;
+  z-index: 3;
+  max-height: 476px;
+  overflow-y: auto;
+}
+
+.movie-search-list{
+  display: flex;
+  flex-direction: column;
+  gap:0px
+}
+.login-button {
+  padding-left: 40px;
+}
+
+@media (max-width: 1440px) {
+  .main-nav {
+    gap: 88px;
+  }
+  .main-but {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+}

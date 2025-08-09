@@ -10,7 +10,8 @@
   font-size: 18px;
   color: #FFFFFF;
   cursor: pointer;
-  width: 100%
+  width: 100%;
+   white-space: nowrap; 
 }
 .black-button{
   padding: 12px 24px;
@@ -48,11 +49,11 @@
 }
 
 .button[data-kind="secondary"] {
-  background-color: var(--secondary);
+  background-color: #393B3C;
 }
 
 .button[data-kind="secondary"]:hover {
-  background-color: var(--secondary-hover);
+  background-color: #747474;
 }
 
 .button .loader-item {

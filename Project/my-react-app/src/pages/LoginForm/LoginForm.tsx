@@ -30,9 +30,7 @@ function LoginForm() {
     mutationFn: (formData: UserLog) => loginUser(formData),
     onSuccess: (responseData) => { 
       queryClient.invalidateQueries({ queryKey: ["auth", "profile"] });
-      dispatch(loginSuccess({
-        token: responseData.token 
-      }));
+       dispatch(loginSuccess({email: responseData.email}));
       navigate('/');
     },
   }, queryClient);
@@ -44,7 +42,7 @@ function LoginForm() {
     <div className="container">
     <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
       <div className="login-wrapper" >
-        <Logo size={35} position="center" />
+        <Logo size={35} position="center" color={"black"} />
       </div>
 
       <div className="form-wrapper">

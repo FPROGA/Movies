@@ -1,0 +1,117 @@
+.moviePage {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.firstPage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.first-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  max-width: 600px;
+}
+.first-container {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+.rating {
+  display: flex;
+  max-height: 23px;
+  gap: 4px;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 36px;
+  padding: 4px 12px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.poster-container {
+  max-width: 680px;
+  max-height: 552px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.movie-poster {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  height: auto;
+  width: auto;
+  align-items: center;
+}
+.buttons {
+  height: 56px;
+  max-width: 558px;
+  margin-top: 60px;
+  max-width: 255px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+.button-trailer {
+  max-width: 171px;
+}
+.secondPage {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 48px;
+}
+h2 {
+  font-weight: 700;
+  font-style: bold;
+  font-size: 40px;
+}
+h3 {
+  font-weight: 400;
+  font-size: 24px;
+}
+h4 {
+  font-weight: 400;
+  font-size: 18px;
+  gap: 24px;
+  color: #ffffffb2;
+  margin: 0;
+}
+.hurtImage{
+    padding: 3px 2px;
+}
+.randomImage{
+    padding: 3px 2px;
+}
+@media(max-width: 1000px) {
+    .first-info {
+        max-width: 400px;
+    }
+}
+
+
+@media(max-width: 750px) {
+    .first-info {
+        max-width: 300px;
+    }
+}
+@media(max-width: 650px) {
+    .first-info {
+        max-width: 200px;
+    }
+}
+
+@media(max-width: 550px) {
+    .first-info {
+        max-width: 200px;
+    }
+}

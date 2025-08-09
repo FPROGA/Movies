@@ -1,0 +1,6 @@
+
+.account-buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 64px;
+}

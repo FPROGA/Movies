@@ -18,6 +18,9 @@
 .register-wrapper{
   margin-top: 64px;
 }
+.reg-end{
+  color: #000000;
+}
 .form-wrapper{
   height: 252px;
   width: 340px;

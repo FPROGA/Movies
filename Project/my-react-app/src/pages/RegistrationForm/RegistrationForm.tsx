@@ -42,11 +42,13 @@ function RegisterForm() {
   };
  
   const email = watch("email");
+  const name = watch("name");
+  const surname = watch("surname");
   return (
     <div className="container">
       <form className="register-form" onSubmit={handleSubmit(onSubmit)}>
         <div className="register-wrapper">
-          <Logo size={35} position="center" />
+          <Logo size={35} position="center" color={"black"} />
         </div>
 
         <div className="form-wrapper">
@@ -78,7 +80,7 @@ function RegisterForm() {
             <input type="password" {...register("confirmPassword")} />
           </FormField>
           {regMutation.isError && <span>{regMutation.error.message}</span>}
-          {regMutation.isSuccess && <span>Добро пожаловать, {email}! </span>}
+          {regMutation.isSuccess && <span>Добро пожаловать, {name}! </span>}
           <Button type="submit" isLoading={regMutation.isPending}>
             Создать аккаунт
           </Button>

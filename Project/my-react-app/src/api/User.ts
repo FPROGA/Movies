@@ -40,7 +40,7 @@ export type UserProfileResponse = z.infer<typeof UserProfileResponseSchema>;
 /**
  * Функция авторизации пользователей
  */
-export function loginUser(data: UserLog): Promise<{ token: string }>  {
+export function loginUser(data: UserLog) {
   const checkedData = UserLogSchema.parse(data);
   return fetch(`${API_BASE_URL}/auth/login`, {
     method: "POST",
@@ -48,6 +48,7 @@ export function loginUser(data: UserLog): Promise<{ token: string }>  {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(checkedData),
+    credentials: 'include'
   })
     .then(validateResponse)
     .then(response => response.json()); 
@@ -57,13 +58,14 @@ export function loginUser(data: UserLog): Promise<{ token: string }>  {
  * Функция регистрации пользователей
  */
 export function registerUser(data: UserReg): Promise<{ token: string }> {
-  const checkedData = UserRegSchema.parse({data});
-  return fetch(`${API_BASE_URL}/auth/user`, {
+  const checkedData = UserRegSchema.parse(data);
+  return fetch(`${API_BASE_URL}/user`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(checkedData),
+    credentials: 'include'
   })
     .then(validateResponse)
     .then(response => response.json()); 
@@ -78,6 +80,7 @@ export async function stopUser(): Promise<{ token: string }> {
     headers: {
       "Content-Type": "application/json",
     },
+    credentials: 'include'
   })
     .then(validateResponse)
     .then((response) => response.json());
@@ -89,11 +92,12 @@ export async function stopUser(): Promise<{ token: string }> {
  * Функция получения данных о текущем авторизованном пользователе
  */
 export async function getUser(): Promise<UserProfileResponse> {
-  const response = await fetch(`${API_BASE_URL}/auth/profile`, {
+  const response = await fetch(`${API_BASE_URL}/profile`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
     },
+    credentials: 'include'
   });
   const data = await validateResponse(response);
   const result = await data.json();

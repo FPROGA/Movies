@@ -1,1 +1,1 @@
-export const API_BASE_URL = "https://cinemaguide.skillbox.cc/docs/#";
+export const API_BASE_URL = "https://cinemaguide.skillbox.cc";

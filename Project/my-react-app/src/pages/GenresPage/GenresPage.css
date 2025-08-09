@@ -1,0 +1,19 @@
+.genre-page{
+  display: flex;
+  flex-direction: column;
+  gap:64px;
+}
+.genre-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 40px;
+  padding: 0;
+  list-style: none;
+  max-width: 1280px; 
+  margin: 0 auto;
+}
+
+.genre-card {
+  display: flex;
+  justify-content: center;
+}
