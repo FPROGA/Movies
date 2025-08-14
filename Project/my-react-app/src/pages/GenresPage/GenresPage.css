@@ -1,19 +1,42 @@
-.genre-page{
+.genre-page {
   display: flex;
   flex-direction: column;
-  gap:64px;
+  gap: 64px;
 }
 .genre-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); 
+  grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   padding: 0;
   list-style: none;
-  max-width: 1280px; 
+  max-width: 1280px;
   margin: 0 auto;
 }
 
 .genre-card {
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  .genre-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 1000px) {
+  .genre-page {
+    gap: 40px;
+  }
+  .genre-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 650px) {
+  .genre-page {
+    padding: 0px; /* Уменьшаем отступы на мобильных */
+  }
+  .genre-list {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+  }
 }

@@ -1,0 +1,45 @@
+
+.email{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding-bottom: 64px;
+}
+.email-image{
+    width: 48px;
+    height: 48px;
+}
+.email-info{
+    display: flex;
+    flex-direction: column;
+}
+.name{
+    font-size: 24px;
+    padding-bottom: 40px;
+}
+
+.email-text{
+    font-size: 24px;
+}
+h3{
+    margin: 0;
+}
+
+.name{
+    display: flex;
+    flex-direction: row;
+     gap: 16px;
+}
+.name-image{
+    background-color: #FFFFFF80;
+    height: 48px;
+    width: 48px;
+    border-radius: 30px;
+    font-size: 24px;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0px;
+
+}

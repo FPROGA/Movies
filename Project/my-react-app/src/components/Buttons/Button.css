@@ -10,11 +10,10 @@
   font-size: 18px;
   color: #FFFFFF;
   cursor: pointer;
-  width: 100%;
    white-space: nowrap; 
+   box-sizing: border-box; 
 }
 .black-button{
-  padding: 12px 24px;
   background: transparent;
   outline: none;
   border: none;

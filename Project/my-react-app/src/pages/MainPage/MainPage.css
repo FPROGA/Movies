@@ -86,32 +86,38 @@ h4 {
   color: #ffffffb2;
   margin: 0;
 }
-.hurtImage{
-    padding: 3px 2px;
+.hurtImage {
+  padding: 3px 2px;
 }
-.randomImage{
-    padding: 3px 2px;
+.randomImage {
+  padding: 3px 2px;
 }
-@media(max-width: 1000px) {
-    .first-info {
-        max-width: 400px;
-    }
-}
-
-
-@media(max-width: 750px) {
-    .first-info {
-        max-width: 300px;
-    }
-}
-@media(max-width: 650px) {
-    .first-info {
-        max-width: 200px;
-    }
+@media (max-width: 1000px) {
+  .first-info {
+    max-width: 400px;
+  }
+  .buttons{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 56px;
+  }
 }
 
-@media(max-width: 550px) {
-    .first-info {
-        max-width: 200px;
-    }
+@media (max-width: 750px) {
+  .first-info {
+    max-width: 300px;
+  }
+}
+@media (max-width: 650px) {
+  .moviePage {
+    padding: 0;
+  }
+
+  
+}
+
+@media (max-width: 550px) {
+  .first-info {
+    max-width: 200px;
+  }
 }

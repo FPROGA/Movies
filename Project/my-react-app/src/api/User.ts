@@ -30,10 +30,10 @@ export type UserReg = z.infer<typeof UserRegSchema>;
  * Валидация для данных о пользователе
  */
 export const UserProfileResponseSchema = z.object({
-  favourites: z.array(z.string()),
-  surname: z.string(),
-  name: z.string(),
-  email: z.string().email(),
+  favorites: z.array(z.string()).default([]), 
+  surname: z.string().optional(), 
+  name: z.string().optional(),    
+  email: z.string().optional() 
 });
 export type UserProfileResponse = z.infer<typeof UserProfileResponseSchema>;
 
@@ -74,7 +74,7 @@ export function registerUser(data: UserReg): Promise<{ token: string }> {
 /**
  * Функция закрытия текущей пользовательской сессии
  */
-export async function stopUser(): Promise<{ token: string }> {
+export async function stopUser() {
   const response = await fetch(`${API_BASE_URL}/auth/logout`, {
     method: "GET",
     headers: {
@@ -84,7 +84,6 @@ export async function stopUser(): Promise<{ token: string }> {
   })
     .then(validateResponse)
     .then((response) => response.json());
-  console.log("Raw response:", await response.text());
   return response;
 }
 
@@ -101,6 +100,5 @@ export async function getUser(): Promise<UserProfileResponse> {
   });
   const data = await validateResponse(response);
   const result = await data.json();
-  console.log("Raw response:", await response.text());
   return UserProfileResponseSchema.parse(result);
 }

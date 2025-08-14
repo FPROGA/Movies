@@ -1,0 +1,9 @@
+.movie-search-card-mobile{
+    width: 543px;
+    height: 92px;
+    background-color: #393B3C;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}

@@ -1,31 +1,17 @@
-import { useMutation } from '@tanstack/react-query';
 import closeButton from '../../assets/closeButton.svg';
 import "./Button.css";
-import { useNavigate } from "react-router-dom";
-import { stopUser } from '../../api/User';
-import { queryClient } from '../../api/queryClient';
 
-export const CloseButton = () => {
-  const logoutMutation = useMutation(
-    {
-      mutationFn: () => stopUser(),
-      onSuccess() {
-         queryClient.clear();
-         window.location.reload();
-      },
-    },
-    queryClient
-  );
-    const navigate = useNavigate();
-    const exit = () =>{
-      navigate('/');
-      logoutMutation.mutate();
-    }
+interface CloseButtonProps {
+  onClick: (e: React.MouseEvent) => void;
+  className?: string;
+}
+export const CloseButton = ({ onClick, className = "" }: CloseButtonProps) => {
+
   return (
     <div 
-      onClick={() => {exit} }
-      className="close-button"
+      className={`close-button ${className}`}
       aria-label="На главную страницу"
+      onClick={onClick}
     >
       <img 
         src={closeButton} 

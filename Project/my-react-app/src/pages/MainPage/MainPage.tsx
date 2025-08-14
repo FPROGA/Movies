@@ -9,34 +9,34 @@ import "./MainPage.css";
 import { FetchTop10Movies } from "../Fetch/FetchTop10Movies/FetchTop10Movies";
 import { getRatingColor } from "../utilus/getRationgColor";
 import PlugImage from "../../assets/plug.jpg";
-import { useAddToFav } from "../../hooks/AddToFav/useAddToFav";
+import { useAddToFav } from "../../hooks/Fav/useAddToFav";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "../../features/auth/store";
-import { useDeleteFromFav } from "../../hooks/AddToFav/useDeleteFromFav";
-
+import { useDeleteFromFav } from "../../hooks/Fav/useDeleteFromFav";
 
 interface MovieProps {
   movie: MovieTypeResponse;
 }
 export function MainPage({ movie }: MovieProps) {
-  const isAuthenticated = useSelector((state: RootState) => state.auth.isAuthenticated);
-	const navigate = useNavigate();
+  const isAuthenticated = useSelector(
+    (state: RootState) => state.auth.isAuthenticated
+  );
+  console.log(isAuthenticated);
+  const navigate = useNavigate();
   const [isFav, setIsFav] = useState(false);
   const { mutate: addToFavMutation } = useAddToFav();
-  const {mutate: deleteFromFavMutation} = useDeleteFromFav();
+  const { mutate: deleteFromFavMutation } = useDeleteFromFav();
 
   const addToFav = () => {
-    if(!isAuthenticated){
-      navigate('/login');
+    if (!isAuthenticated) {
+      navigate("/login");
       return;
     }
-    isFav? setIsFav(false): setIsFav(true);
-    if(isFav){
+    if (isFav) {
       setIsFav(false);
       deleteFromFavMutation(movie.id);
-    }
-    else{
+    } else {
       setIsFav(true);
       addToFavMutation(movie.id);
     }

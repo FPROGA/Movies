@@ -5,7 +5,9 @@ import { queryClient } from "../../api/queryClient";
 export function useGetFav() {
   const query =  useQuery({
     queryFn: () =>  getFavourites(),
+    retry: 1,
     queryKey: ['favourites'],
+    staleTime: 60 * 1000, 
   }, queryClient);
 
     switch(query.status){

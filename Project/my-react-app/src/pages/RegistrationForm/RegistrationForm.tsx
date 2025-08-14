@@ -41,14 +41,12 @@ function RegisterForm() {
     regMutation.mutate(data);
   };
  
-  const email = watch("email");
   const name = watch("name");
-  const surname = watch("surname");
   return (
     <div className="container">
       <form className="register-form" onSubmit={handleSubmit(onSubmit)}>
         <div className="register-wrapper">
-          <Logo size={35} position="center" color={"black"} />
+          <Logo size={143} position="center" color={"black"} />
         </div>
 
         <div className="form-wrapper">

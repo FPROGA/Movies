@@ -1,0 +1,55 @@
+.fav-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 60px;
+  padding: 0;
+  list-style: none;
+  max-width: 1400px; 
+  margin: 0 auto;
+}
+
+.fav-card {
+  display: flex;
+  justify-content: center;
+}
+.fav-card {
+  position: relative; 
+  display: inline-block;
+}
+
+.fav-card .close-button {
+  position: absolute;
+  top: 4px;
+  right: -45px;
+  z-index: 10; 
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: none;
+}
+
+@media(max-width: 1030px) {
+    .fav-list {
+        grid-template-columns: repeat(4, 1fr); 
+    }
+}
+
+@media(max-width: 870px) {
+    .fav-list {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+@media(max-width: 650px) {
+    .fav-list {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+@media(max-width: 470px) {
+    .fav-list {
+        grid-template-columns: repeat(1, 1fr); 
+    }
+}

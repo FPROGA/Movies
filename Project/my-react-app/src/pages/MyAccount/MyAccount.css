@@ -1,6 +1,60 @@
-
+.my-account{
+    padding-left: 80px;
+}
 .account-buttons{
     display: flex;
     flex-direction: row;
     gap: 64px;
+    padding: 0 0 64px 0;
 }
+.logout-button{
+    max-width: 262px;
+}
+.favourites, .settings{
+    padding: 0;
+    font-size: 24px;
+    color: white;
+    background-color: transparent !important;
+}
+
+.favourites:hover, .settings:hover{
+    text-decoration-color: #DC5DFC !important;
+    text-decoration: underline;
+}
+.icon{
+    width: 24px;
+    height: 24px;
+    padding-right: 4px;
+}
+.icon img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* MyAccount.css */
+.favourites::after {
+    content: "Избранные фильмы";
+}
+.settings::after{
+    content: "Настройки аккаунта";
+}
+.favourites span, 
+.settings span {
+  display: none;
+}
+@media (max-width: 600px) {
+    .favourites::after {
+        content: "Избранное";
+    }
+    .settings::after{
+    content: "Настройки";
+    }
+    .my-account{
+    padding-left: 0;
+    }
+    .account-buttons{
+    gap: 24px;
+    }
+}
+
